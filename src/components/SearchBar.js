@@ -1,17 +1,14 @@
-// src/components/SearchBar.js
 import React, { useState, useCallback } from "react";
 import _ from "lodash";
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
-  // Debounced Search to Improve Performance
   const debouncedSearch = useCallback(
     _.debounce((searchText) => onSearch(searchText), 500),
     []
   );
 
-  // Handle Input Change
   const handleChange = (event) => {
     const searchText = event.target.value;
     setQuery(searchText);
