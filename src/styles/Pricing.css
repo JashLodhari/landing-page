@@ -1,0 +1,39 @@
+.pricing {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f6f6f6;
+  }
+  
+  .pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .pricing-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .best-plan {
+    background: #ff4b2b;
+    color: white;
+  }
+  
+  .select-btn {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .select-btn:hover {
+    background: #ff4b2b;
+  }
+  
