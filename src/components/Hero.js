@@ -1,7 +1,6 @@
-// src/components/Hero.js
 import React from "react";
 import "../styles/Hero.css";
-import heroVideo from "../assets/hero-video.mp4"; // Ensure you have a video file
+import heroVideo from "../assets/hero-video.mp4";
 
 const Hero = () => {
   return (
