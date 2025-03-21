@@ -3,14 +3,13 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaMapMarkerAlt, FaUser, FaSearch } from "react-icons/fa";
 import "../styles/UserList.css";
-import _ from "lodash"; // Import lodash for debounce
+import _ from "lodash";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Fetch Users from API
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
@@ -21,15 +20,13 @@ const UserList = () => {
       .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
-  // Debounced Search Function
   const handleSearch = _.debounce((query) => {
     const filtered = users.filter((user) =>
       user.name.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredUsers(filtered);
-  }, 300); // 300ms delay
+  }, 300);
 
-  // Handle Input Change
   const onSearchChange = (event) => {
     setSearchTerm(event.target.value);
     handleSearch(event.target.value);
